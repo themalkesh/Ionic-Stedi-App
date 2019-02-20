@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>More Apps</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg">
+
+  <ion-card>
+
+    <img src="https://stediteachers.org/wp-content/uploads/2015/02/throughoutDay_big.png"/>
+
+    <ion-card-content>
+      <ion-card-title>
+        STEDI Teachers
+      </ion-card-title>
+      <p>STEDI Teachers provides courses that are designed to help teachers with identifying confidently which inappropriate behaviors to respond to and which to ignore, preventing inappropriate behavior from happening in the first place, encouraging on task behavior, avoiding common teacher traps, and more!
+      </p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-start (click)="launch('https://itunes.apple.com/us/app/stedi-teachers/id1324799178?mt=8')">
+          <ion-icon name='apple'></ion-icon>
+          App Store
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button clear small color="danger" icon-start (click)="launch('https://play.google.com/store/apps/details?id=org.stediteacher.app&hl=en_US')">
+          <ion-icon name='android'></ion-icon>
+          Google Play
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+  <ion-card>
+
+    <div>
+      <img src="http://parentingmagic.com/wp-content/uploads/2017/04/ParentingMagic.png"/>
+    </div>
+
+    <ion-card-content>
+      <ion-card-title>
+        Parenting Magic
+      </ion-card-title>
+      <p>
+      We understand that parenting is demanding, you need help that is flexible for your time schedule. We let you learn when you have time. From helps with laundry and personal finance to methods to make challenges easier every day, we have courses for you. Real world parenting requires more information and we’ve brought you instructors who have been there and know what to do.
+      </p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-start (click)="launch('https://itunes.apple.com/us/app/parenting-magic/id1294466221?mt=8')">
+          <ion-icon name='apple'></ion-icon>
+          App Store
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button clear small color="danger" icon-start (click)="launch('https://play.google.com/store/apps/details?id=com.parentingmagic.app&hl=en')">
+          <ion-icon name='android'></ion-icon>
+          Google Play
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+
+</ion-content>

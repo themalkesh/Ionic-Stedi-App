@@ -1,0 +1,131 @@
+<!--
+  Generated template for the MorePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+ 
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>More</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+
+<ion-list *ngIf="userProfile" >
+
+  <ion-item>
+    <ion-avatar item-start>
+      <div class="profile-image" *ngIf="ImageUrl">
+        <img src="{{ImageUrl}}" alt="profile-image" />
+      </div>
+    </ion-avatar>
+    {{userProfile.fname}} {{userProfile.lname}}
+    <button ion-button outline item-end (click)="editprofile()" >Edit Profile</button>
+  </ion-item>
+
+  <button ion-item (click)="trackinhistrory()">
+    <ion-icon name="archive" item-start></ion-icon>
+    Tracking History
+  </button>
+
+  <button ion-item (click)="likefb()">
+    <ion-icon name="logo-facebook" item-start></ion-icon>
+     Like us on Facebook
+  </button>
+
+  <button ion-item (click)="likeig()">
+    <ion-icon name="logo-instagram" item-start></ion-icon>
+     Follow us on Instagram
+  </button>
+
+  <button ion-item (click)="otherapps()">
+    <ion-icon name="apps" item-start></ion-icon>
+     More Apps by STEDI
+  </button>
+
+  <button ion-item  (click)="openlink('https://stedi.org/contact/')">
+    <ion-icon name="help" item-start ></ion-icon>
+    Help
+  </button>
+ 
+ </ion-list>
+
+ <ion-grid>
+  <ion-row align-items-center justify-content-center >
+    <ion-col >
+      <a class="terms"  (click)="openlink('https://stedi.org/terms-conditions/')"> Terms </a>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-footer>
+<ion-grid>
+  <ion-row>
+    <ion-col col-9 class="vertical-align-content" justify-content-center >
+      <span class="version" > Version 0.1 </span>
+    </ion-col>
+    <ion-col col-3 >
+        <button ion-button color="secondary" icon-left   (click)="logout()">
+          Log Out
+        </button>
+    </ion-col>
+  </ion-row>
+</ion-grid>    
+</ion-footer>
+
+
+<!--
+ <ion-list>
+
+
+   <button ion-item icon-left block clear (click)="getuserprofile()">
+    <ion-icon name="exit"></ion-icon>
+    get Profile
+  </button> 
+  
+  <button ion-item icon-left block clear (click)="history()">
+    <ion-icon name="filing"></ion-icon>
+    History
+  </button>
+  
+  <button ion-item icon-left block clear (click)="facebook()">
+    <ion-icon name="facebook"></ion-icon>
+    Like us on Facebook
+  </button>  
+  
+  <button ion-item icon-left block clear (click)="instagram()">
+    <ion-icon name="instagram"></ion-icon>
+    Follow us on Instagram
+  </button>
+  
+  <button ion-item icon-left block clear (click)="otherapps()">
+    <ion-icon name="add-circle"></ion-icon>
+    More Apps by STEDI
+  </button>  
+  
+  <button ion-item icon-left block clear (click)="launch('https://stedi.org/contact/')">
+    <ion-icon name="help"></ion-icon>
+    Help
+  </button>  
+  
+  <button ion-item icon-left block clear (click)="launch('https://stedi.org/terms-conditions/')">
+    <ion-icon name="information-circle"></ion-icon>
+    Terms
+  </button> 
+  
+  <button ion-item icon-left block clear (click)="logout()">
+    <ion-icon name="exit"></ion-icon>
+    Log Out
+  </button>
+  
+</ion-list>
+-->
+
+</ion-content>

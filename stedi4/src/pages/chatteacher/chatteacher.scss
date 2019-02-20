@@ -1,0 +1,192 @@
+page-chatteacher {
+  .keyboard-open .scroll-content {
+    margin-bottom: 0px !important;
+}
+
+  ion-footer.bottomup {
+      bottom: 150px;
+
+  }
+   .message_text a{
+     color: #fff;
+   }
+   .user_name {
+        color: #afafaf;
+        font-size: 12px;
+        position: relative;
+        top:-4px;
+    }
+    .message {
+        padding: 10px !important;
+        transition: all 250ms ease-in-out !important;
+        border-radius: 10px !important;
+        margin-bottom: 4px !important;
+    }
+    .my_message {
+        color: #000;
+        text-align: right;
+    }
+    .my_message .message_content{
+        background: color($colors, primary) !important;
+        color: #fff !important;
+        padding: 10px !important;
+        border-radius: 15px 0px 15px 15px !important ;
+        float: right;
+
+    }
+    .other_message {
+        color: #000;
+        text-align: left;
+    }
+    .other_message a {
+      color: color($colors,primary) !important;
+    }
+    .other_message .message_content{
+        background: #dcdcdc !important;
+        color: #000 !important;
+        padding: 10px !important;
+        border-radius: 0px 15px 15px 15px !important;
+        float: left;
+
+    }
+    .time {
+        color: #afafaf;
+        float: right;
+        font-size: small;
+    }
+    .message_row {
+        background-color: #fff;
+    }
+    span.user_image{
+      position: relative;
+      top: 15px;
+    }
+    span.user_image img {
+      border-radius: 50%;
+      height: 44px;
+      width: 44px;
+  }
+  span.user_text_image{
+    border-radius: 50%;
+      height: 44px;
+      width: 44px;
+      position: relative;
+      display: block;
+      overflow: hidden;
+      color: #fff;
+      background-color: color($colors, primary);
+      white-space: nowrap;
+      font-size: 36px;
+      line-height: 44px;
+      padding-left: 0px;
+      text-align: center;
+  }
+
+     ion-content {
+    /*background: url(../assets/imgs/chat-back.png) no-repeat center center fixed;*/
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    .item-md, .item-ios {
+      background: none;
+    }
+  }
+  ion-footer {
+    background: white;
+    ion-icon {
+      padding: 10px;
+      font-size: 20px;
+    }
+  }
+  .chat-status {
+    min-height: 49px;
+    .chat-date {
+      display: block;
+      font-size: 10px;
+      font-style: italic;
+      color: #fff;
+      text-shadow: 0px -1px 0px #222, 0px 1px 0px #aaa;
+      height: 15px;
+      left: 10%;
+      right:10%;
+    }
+    .chat-content-center {
+      padding: 5px 10px;
+      background-color: #e1e1f7;
+      border-radius: 6px;
+      font-size: 12px;
+      color: #555;
+      height: 34px;
+      left: 10%;
+      right:10%;
+    }
+  }
+  .chat-message {
+    width: 80%;
+    min-height: 40px;
+    .right-bubble {
+        position: relative;
+        background: #dcf8c6;
+        border-top-left-radius: .4em;
+      border-bottom-left-radius: .4em;
+      border-bottom-right-radius: .4em;
+      padding: 5px 10px 10px;
+      left: 15%;
+      span.msg-name {
+        font-size: 12px;
+        font-weight: bold;
+        color: green;
+      }
+      span.msg-date {
+        font-size: 10px;
+      }
+    }
+
+    .right-bubble:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        border: 27px solid transparent;
+        border-left-color: #dcf8c6;
+        border-right: 0;
+        border-top: 0;
+        margin-top: -13.5px;
+        margin-right: -27px;
+    }
+    .left-bubble {
+        position: relative;
+        background: #ffffff;
+      border-top-right-radius: .4em;
+      border-bottom-left-radius: .4em;
+      border-bottom-right-radius: .4em;
+      padding: 5px 10px 10px;
+      left: 5%;
+      span.msg-name {
+        font-size: 12px;
+        font-weight: bold;
+        color: blue;
+      }
+      span.msg-date {
+        font-size: 10px;
+      }
+    }
+
+    .left-bubble:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        border: 27px solid transparent;
+        border-right-color: #ffffff;
+        border-left: 0;
+        border-top: 0;
+        margin-top: -13.5px;
+        margin-left: -27px;
+    }
+  }
+}

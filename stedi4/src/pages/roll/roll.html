@@ -1,0 +1,52 @@
+
+<ion-header>
+  <ion-navbar>
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Choose Role </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content >
+
+  <form (ngSubmit)="updateroll()" [formGroup]="rollForm">
+    <ion-list inset>
+
+      <ion-item>
+        <ion-label>Parent</ion-label>
+        <ion-toggle   formControlName="parent" ></ion-toggle>
+      </ion-item>
+
+      <ion-item *ngIf="rollForm.value.parent"  >
+        <button (click)="child()" ion-button > Manage Child(ren) </button>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Substitute Teacher</ion-label>
+        <ion-toggle formControlName="subteacher" ></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Teacher</ion-label>
+        <ion-toggle formControlName="teacher" ></ion-toggle>
+      </ion-item>
+
+
+      <ion-list>
+        <button ion-button icon-left block clear  [disabled]="!rollForm.value.parent && !rollForm.value.subteacher && !rollForm.value.teacher"   >
+          <ion-icon name="person-add"></ion-icon>
+          Update Role(s)
+        </button>
+      </ion-list>
+
+    </ion-list>
+  </form>
+
+
+</ion-content>

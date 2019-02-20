@@ -1,0 +1,21 @@
+<ion-content padding>
+   <ion-list class="accordion-list" *ngIf="topics" >
+
+    <div class="listcontainer" *ngFor="let item of topics; let i = index" >
+      <ion-list-header no-lines no-padding>
+           {{ item.name }}
+      </ion-list-header>
+      <ion-item *ngFor="let topic of item.topics; let j = index  " text-wrap >
+        <ion-label>{{ topic.name }}</ion-label>
+        <ion-checkbox [(ngModel)]="topics[i]['topics'][j]['tracked']" (ionChange)="updatetopic()"></ion-checkbox>
+      </ion-item>
+    </div>
+
+  </ion-list>
+  <!-- <ion-list *ngIf="topics">
+    <ion-item *ngFor="let topic of topics">
+      <ion-label>{{ topic.name }}</ion-label>
+      <ion-checkbox [(ngModel)]="topic.tracked" (ionChange)="updatetopic()"></ion-checkbox>
+    </ion-item>
+  </ion-list> -->
+</ion-content>

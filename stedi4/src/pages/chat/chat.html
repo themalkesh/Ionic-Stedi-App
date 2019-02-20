@@ -1,0 +1,7 @@
+<ion-content>
+  <ion-tabs  tabsPlacement="top" name="chatpages"  tabsHighlight="true" *ngIf="roll" >
+    <ion-tab tabIcon="chat" tabTitle="CParent1" [root]="chattab1Root" [show]="roll.parent"></ion-tab>
+    <ion-tab tabIcon="chat" tabTitle="CSubteacher" [root]="chattab2Root" [show]="roll.subteacher"  ></ion-tab>
+    <ion-tab tabIcon="chat" tabTitle="CTeacher" [root]="chattab3Root" [show]="roll.teacher"   ></ion-tab>
+  </ion-tabs>
+</ion-content>

@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "143448264132",
+    "firebase_url": "https://steditracker.firebaseio.com",
+    "project_id": "steditracker",
+    "storage_bucket": "steditracker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143448264132:android:7fb865fbf075d9dc",
+        "android_client_info": {
+          "package_name": "org.stedi.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "143448264132-bggvc8m954l87l46jb6lr0am0u2vt6sr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.stedi.app",
+            "certificate_hash": "abb89a572d43b35cf466e4bf0be9bb3a668149ba"
+          }
+        },
+        {
+          "client_id": "143448264132-omkp5f9t9kv1crkesn44bs2pmpsi4ijk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBO2plic3XcOeylynuc1D0DtLlY1tjp4qk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "143448264132-omkp5f9t9kv1crkesn44bs2pmpsi4ijk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "143448264132-ofpkqtcb2qjm4gaa5msth8e1j8rb649i.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.stedi.app"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

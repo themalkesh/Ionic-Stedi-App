@@ -1,0 +1,7 @@
+<ion-content>
+  <ion-tabs tabsPlacement="bottom" name="parentingpages"   tabsHighlight="true" *ngIf="roll">
+    <ion-tab tabTitle="Parent" [root]="TrackparentPage" [show]="roll.parent"></ion-tab>
+    <ion-tab tabTitle="Subteacher" [root]="TracksubteacherPage" [show]="roll.subteacher"></ion-tab>
+    <ion-tab tabTitle="Teacher" [root]="TrackteacherPage" [show]="roll.teacher"></ion-tab>
+  </ion-tabs>
+</ion-content>

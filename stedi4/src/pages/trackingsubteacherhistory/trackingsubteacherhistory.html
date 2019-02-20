@@ -1,0 +1,34 @@
+<!--
+  Generated template for the TrackingsubteacherhistoryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Tracking Subteacher History</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="historydates">
+    <ion-item *ngFor="let item of historydates" text-wrap>
+      <h2>{{item?.id}}</h2>
+      <ion-list *ngIf="item?.data.topics">
+        <ion-item *ngFor="let topics of item?.data.topics" text-wrap>
+          <h2>{{topics?.name}}</h2>
+          <ion-list *ngIf="topics?.topics">
+            <ion-item *ngFor="let topic of topics?.topics" text-wrap>
+              <ion-icon name="checkmark-circle" [style.color]="'#32db64'"   *ngIf="topic?.tracked" item-start></ion-icon>
+              <ion-icon name="close-circle" [style.color]="'#f53d3d'"   *ngIf="!topic?.tracked" item-start></ion-icon>
+              <h2>{{topic?.name}}</h2>
+            </ion-item>
+          </ion-list>
+        </ion-item>
+      </ion-list>
+    </ion-item>
+  </ion-list>
+</ion-content>
+

@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Tracker - Parent </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list *ngIf="childs" >
+    <button  ion-item *ngFor="let child of childs | async "  (click)="parentchildpage(child)" >
+       {{ child.name }}
+    </button>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Childs </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row *ngIf="!editform" >
+      <ion-col col-8 >
+        <ion-input type="text" placeholder="Child's Name" [(ngModel)]="childname" name="childname">
+        </ion-input>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-button (click)="addchild()" [disabled]="!childname"  > Add Child </button>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="editform">
+      <ion-col col-8>
+        <ion-input type="text" placeholder="Child Name" [(ngModel)]="childname" name="childname">
+        </ion-input>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-button (click)="updatechild()" [disabled]="!childname"  > Update Child </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list *ngIf="childs" >
+    <ion-item *ngFor="let child of childs | async "  >
+      {{ child.name }}
+
+        <button ion-button item-end (click)="editchild(child)"> Edit </button>
+        <button ion-button item-end (click)="deletechild(child.id)"> delete </button>
+
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>
